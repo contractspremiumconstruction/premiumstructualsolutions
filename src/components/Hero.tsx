@@ -6,14 +6,18 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Hero() {
   return (
     <section className="relative w-full h-[60vh] md:h-[85vh] bg-black">
       <Carousel
+        opts={{
+          loop: true,
+        }}
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 5000,
           }),
         ]}
         className="w-full h-full"
@@ -32,8 +36,12 @@ export default function Hero() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        <CarouselPrevious className="left-4 w-24 h-24 md:w-48 md:h-48 border-0 bg-transparent hover:bg-transparent text-white/70 hover:text-white transition-colors cursor-pointer top-1/2 -translate-y-1/2">
+          <ChevronLeft className="w-20 h-20 md:w-40 md:h-40" strokeWidth={3} />
+        </CarouselPrevious>
+        <CarouselNext className="right-4 w-24 h-24 md:w-48 md:h-48 border-0 bg-transparent hover:bg-transparent text-white/70 hover:text-white transition-colors cursor-pointer top-1/2 -translate-y-1/2">
+          <ChevronRight className="w-20 h-20 md:w-40 md:h-40" strokeWidth={3} />
+        </CarouselNext>
       </Carousel>
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">

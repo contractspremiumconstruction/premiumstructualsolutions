@@ -84,7 +84,7 @@ export default function Footer() {
                 S.V. Road, Jogeshwari (West), <br />
                 MUMBAI - 400102
               </p>
-              <h3>📞 +022 49768302</h3>
+              <h3>📞 +91 9833594792/ +91 9867277811</h3>
               <h3>✉️ contracts.premiumconst@gmail.com</h3>
             </div>
           </div>
@@ -92,12 +92,31 @@ export default function Footer() {
       </div>
 
       <a
-        href="https://wa.me/"
+        href="https://wa.me/9833594792"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
         className="
           fixed bottom-6 right-6 z-50
+          w-14 h-14
+          rounded-full
+          bg-[#25D366]
+          flex items-center justify-center
+          shadow-lg
+          transition-transform duration-200
+          hover:scale-110
+        "
+      >
+        <FaWhatsapp className="w-7 h-7 text-white" />
+      </a>
+
+      <a
+        href="https://wa.me/9867277811"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="
+          fixed bottom-24 right-6 z-50
           w-14 h-14
           rounded-full
           bg-[#25D366]

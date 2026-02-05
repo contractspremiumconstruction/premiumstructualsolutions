@@ -56,21 +56,21 @@ export default function CoreStrengths() {
               ]
             }
           ].map((col, idx) => (
-            <div key={idx} className="space-y-6">
-              <h3 className="text-lg font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 pb-4 mx-4">
+            <div key={idx} className="space-y-4 md:space-y-6 relative border-b-4 border-blue-50/50 last:border-0 pb-6 mb-6 md:pb-0 md:mb-0 md:border-0 last:mb-0">
+              <h3 className="text-lg font-bold text-slate-400 uppercase tracking-wider md:border-b md:border-slate-100 pb-2 md:pb-4 mx-2 md:mx-4">
                 {col.category}
               </h3>
               <ul className="space-y-2">
                 {col.items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="group p-4 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 hover:scale-105 transition-all duration-500 ease-out cursor-default">
-                    <div className="flex items-start gap-4">
-                      <item.icon strokeWidth={1.5} className="w-8 h-8 text-slate-600 group-hover:text-slate-900 transition-colors duration-300 shrink-0 mt-1" />
+                  <li key={itemIdx} className="group p-3 md:p-4 rounded-xl border border-transparent hover:border-slate-200 hover:bg-slate-50 hover:scale-105 active:scale-[0.98] active:bg-blue-50 transition-all duration-300 ease-out cursor-pointer md:cursor-default">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <item.icon strokeWidth={1.5} className="w-9 h-9 md:w-8 md:h-8 text-[#0B2545] md:text-slate-600 group-hover:text-slate-900 transition-colors duration-300 shrink-0 mt-0.5 md:mt-1" />
                       <div>
-                        <h4 className="font-semibold text-slate-800 text-lg group-hover:text-black transition-colors duration-300">
+                        <h4 className="font-semibold text-slate-900 md:text-slate-800 text-base md:text-lg group-hover:text-black transition-colors duration-300 leading-snug">
                           {item.title}
                         </h4>
-                        <div className="relative pt-1">
-                           <p className="text-sm text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="relative pt-0.5 md:pt-1">
+                           <p className="text-sm text-slate-600 md:text-slate-500 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed block">
                              {item.desc}
                            </p>
                         </div>

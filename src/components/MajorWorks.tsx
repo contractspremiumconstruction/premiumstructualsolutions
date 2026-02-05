@@ -19,7 +19,7 @@ export default function MajorWorks() {
           <div className="w-16 h-1 bg-[#972727] mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
           {[
             { title: "Residential Townships", icon: Home, desc: "Integrated living communities with modern amenities." },
             { title: "High-Rise Buildings", icon: Building2, desc: "Sky-scraping structures with advanced engineering." },
@@ -31,16 +31,16 @@ export default function MajorWorks() {
             { title: "Interiors", icon: Brush, desc: "Turnkey interior solutions for distinctive spaces." },
             { title: "Restoration", icon: ShieldCheck, desc: "Structural strengthening and heritage conservation." },
           ].map((work, idx) => (
-            <div key={idx} className="group p-8 rounded-xl bg-white border border-transparent shadow-sm hover:shadow-lg hover:border-gray-200 hover:scale-105 transition-all duration-500 ease-out">
+            <div key={idx} className="group p-4 md:p-8 rounded-xl bg-white border border-gray-100 md:border-transparent shadow-sm md:shadow-sm hover:shadow-lg hover:border-gray-200 hover:scale-105 active:scale-95 active:bg-blue-50/30 transition-all duration-300 ease-out cursor-pointer md:cursor-default">
               <div className="flex flex-col items-center text-center">
-                <div className="mb-6 p-4 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors duration-300">
-                  <work.icon strokeWidth={1.5} className="w-8 h-8 text-slate-800 group-hover:text-black transition-colors duration-300" />
+                <div className="mb-3 md:mb-6 p-3 md:p-4 rounded-full bg-blue-50/50 md:bg-gray-50 group-hover:bg-blue-100 md:group-hover:bg-gray-100 transition-colors duration-300">
+                  <work.icon strokeWidth={1.5} className="w-7 h-7 md:w-8 md:h-8 text-[#0B2545] md:text-slate-800 group-hover:text-black transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                <h3 className="text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-2 leading-tight">
                   {work.title}
                 </h3>
-                <div className="h-6 overflow-visible relative flex justify-center w-full">
-                   <p className="text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute whitespace-nowrap">
+                <div className="h-auto md:h-6 overflow-visible relative flex justify-center w-full">
+                   <p className="hidden md:block text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute whitespace-nowrap">
                      {work.desc}
                    </p>
                 </div>
