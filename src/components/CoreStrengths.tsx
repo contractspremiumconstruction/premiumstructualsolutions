@@ -15,10 +15,10 @@ import {
 
 export default function CoreStrengths() {
   return (
-    <section className="py-24 px-6 bg-white text-gray-900">
+    <section className="py-24 px-6 bg-slate-100 text-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#972727] mb-4">Core Strengths</h2>
+          <h2 className="text-5xl font-bold text-[#972727] mb-4">Core Strengths</h2>
           <div className="w-16 h-1 bg-[#972727] mx-auto rounded-full"></div>
         </div>
       

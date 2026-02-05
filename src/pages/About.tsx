@@ -49,7 +49,7 @@ export default function About() {
       {/* SECTION 3: PRESENCE (DARK - BLUE) */}
       <section className="py-20 px-6 text-center bg-[var(--about-bg-dark)] text-[var(--about-text-dark)]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-10">Our Presence</h2>
+          <h2 className="text-5xl mb-16">Our Presence</h2>
           <div className="bg-white w-full md:w-[60%] mx-auto rounded-2xl overflow-hidden border border-white/10 relative shadow-sm">
              <img 
                src="/map.png" 
@@ -68,10 +68,10 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-10">
             {/* Vision */}
             <div className="bg-[#1f2937] p-8 rounded-2xl border-t-4 border-[var(--about-accent)] shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-white">
+              <h3 className="text-4xl font-bold mb-4 flex items-center gap-2 text-white">
                 <TrendingUp size={24} className="text-[var(--about-accent)]"/> Vision
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 To be a world-class construction and infrastructure enterprise committed to quality, 
                 timely completion, customer satisfaction, and continuous learning.
               </p>
@@ -79,10 +79,10 @@ export default function About() {
 
             {/* Mission */}
             <div className="bg-[#1f2937] p-8 rounded-2xl border-t-4 border-[var(--about-accent)] shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-white">
+              <h3 className="text-4xl font-bold mb-4 flex items-center gap-2 text-white">
                 <ShieldCheck size={24} className="text-[var(--about-accent)]"/> Mission
               </h3>
-              <ul className="text-gray-300 leading-relaxed space-y-3 list-disc pl-5">
+              <ul className="text-xl text-gray-300 leading-relaxed space-y-3 list-disc pl-5">
                 <li>Adopt latest technologies in engineering & construction.</li>
                 <li>Encourage innovation, integrity, and skill upgradation.</li>
                 <li>Maintain a safe and motivating work environment.</li>
@@ -92,10 +92,10 @@ export default function About() {
 
             {/* Values */}
             <div className="bg-[#1f2937] p-8 rounded-2xl border-t-4 border-[var(--about-accent)] shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-white">
+              <h3 className="text-4xl font-bold mb-4 flex items-center gap-2 text-white">
                 <Users size={24} className="text-[var(--about-accent)]"/> Values
               </h3>
-              <ul className="text-gray-300 leading-relaxed grid grid-cols-1 gap-2">
+              <ul className="text-xl text-gray-300 leading-relaxed grid grid-cols-1 gap-2">
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[var(--about-accent)] rounded-full"></div> Openness and trust</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[var(--about-accent)] rounded-full"></div> Integrity and reliability</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[var(--about-accent)] rounded-full"></div> Superior quality commitment</li>
@@ -108,10 +108,10 @@ export default function About() {
           {/* Row 2: Quality & Safety */}
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-[#1f2937] p-8 rounded-2xl border-t-4 border-[var(--about-accent)] shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h3 className="text-4xl font-bold text-white mb-6 flex items-center gap-3">
                 <Award className="w-8 h-8 text-[var(--about-accent)]"/> Quality Commitment
               </h3>
-              <ul className="space-y-4 text-gray-300 text-lg">
+              <ul className="space-y-4 text-xl text-gray-300 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="text-[var(--about-accent)] font-bold">✓</span> Quality planning through checklists and inspections.
                 </li>
@@ -125,10 +125,10 @@ export default function About() {
             </div>
 
             <div className="bg-[#1f2937] p-8 rounded-2xl border-t-4 border-[var(--about-accent)] shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h3 className="text-4xl font-bold text-white mb-6 flex items-center gap-3">
                 <HardHat className="w-8 h-8 text-[var(--about-accent)]"/> Safety Commitment
               </h3>
-              <ul className="space-y-4 text-gray-300 text-lg">
+              <ul className="space-y-4 text-xl text-gray-300 text-lg">
                 <li className="flex items-start gap-3">
                   <span className="text-[var(--about-accent)] font-bold">✓</span> Safe working environments across all locations.
                 </li>
@@ -183,8 +183,8 @@ export default function About() {
       {/* SECTION 6: CLIENTS & CREDENTIALS GATEWAY */}
       <section className="py-20 px-6 bg-white text-gray-900 border-t border-gray-100">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Professional Network</h2>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+          <h2 className="text-5xl font-bold mb-6 text-gray-900">Our Professional Network</h2>
+          <p className="text-2xl text-gray-600 mb-10 leading-relaxed">
             Over decades of excellence, we have built strong relationships with industry-leading clients, 
             visionary architects, and expert consultants. Our portfolio stands as a testament to these 
             collaborations and our commitment to quality.
@@ -193,8 +193,8 @@ export default function About() {
             href="/clients-credentials" 
             className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-[var(--about-bg-dark)] hover:bg-[#1a2330] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            <Award className="w-5 h-5 mr-2" />
-            View Full Clients & Credentials
+            <Award className="w-12 h-12 mr-2" />
+            <p className="text-2xl">View Full Clients & Credentials</p>
           </a>
         </div>
       </section>

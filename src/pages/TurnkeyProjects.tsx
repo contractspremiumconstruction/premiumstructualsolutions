@@ -85,10 +85,10 @@ export default function TurnkeyProjects() {
       {/* 3️⃣ Projects Grid */}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+          <h2 className="text-5xl text-[#972727] text-center mb-10">
             Featured Projects
           </h2>
-          <p className="text-gray-500 italic">
+          <p className="text-gray-500 text-xl">
             Projects independently executed by Swar Enterprises
           </p>
         </div>
