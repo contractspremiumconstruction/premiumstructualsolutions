@@ -121,7 +121,7 @@ export default function Navbar() {
 
 
   return (
-    <div className="fixed top-0 w-full bg-white shadow h-24 flex items-center px-6 z-10">
+    <div className="fixed top-0 w-full bg-white shadow h-24 flex items-center px-6 z-50">
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <Link to="/" className="shrink-0">
@@ -134,8 +134,9 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-6 text-2xl">
+          <Link to="/about" className="cursor-pointer transition-transform hover:scale-110">About Us</Link>
           <NavLinks />
-        </div>
+      </div>
 
         {/* Mobile Hamburger */}
         <div className="lg:hidden">

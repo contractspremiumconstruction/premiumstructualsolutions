@@ -6,6 +6,7 @@ import RCC from "./pages/RCC"
 import Interiors from "./pages/Interiors"
 import RestorationWaterproofing from "./pages/RestorationWaterproofing"
 import TurnkeyProjects from "./pages/TurnkeyProjects"
+import About from "./pages/About"
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/rcc" element={<RCC />} />
         <Route path="/interiors" element={<Interiors />} />
         <Route path="/restoration-waterproofing" element={<RestorationWaterproofing />} />

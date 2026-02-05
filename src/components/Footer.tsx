@@ -7,7 +7,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#141414] text-white mt-20 min-h-52 pb-5">
+    <footer className="bg-[#141414] text-white min-h-52 pb-5">
       <div className="w-full bg-[#141414] flex justify-center items-center min-h-52 mb-5">
         <div className="flex justify-around gap-16 h-48 mt-6">
           <div className="hidden lg:flex flex-col gap-3">
@@ -32,6 +32,13 @@ export default function Footer() {
             <Separator className="bg-gray-200"/>
 
             <div className="text-gray-300 flex flex-col items-start gap-1">
+              <button
+                onClick={() => navigate("/about")}
+                className="cursor-pointer hover:text-white transition"
+              >
+                About Us
+              </button>
+
               <button
                 onClick={() => navigate("/rcc")}
                 className="cursor-pointer hover:text-white transition"
