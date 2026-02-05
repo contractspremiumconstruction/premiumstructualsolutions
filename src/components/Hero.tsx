@@ -28,6 +28,7 @@ export default function Hero() {
         plugins={[
           Autoplay({
             delay: 5000,
+            stopOnInteraction: false,
           }),
         ]}
         className="w-full h-full"
