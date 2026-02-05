@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import ProjectCard from "@/components/ProjectCard"
 
 export default function TurnkeyProjects() {
   const [open, setOpen] = useState(false)
@@ -55,13 +56,13 @@ export default function TurnkeyProjects() {
     setOpen(false)
   }
 
-  const placeholder = "/placeholder.png";
+
 
   return (
     <main className="pt-24">
       {/* 1️⃣ Hero */}
       <section className="relative h-[70vh]">
-        <img src={placeholder} className="w-full h-full object-cover" />
+        <img src="/turnkey/turnkey5.png" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-7xl mx-auto px-6 text-white">
             <h1 className="text-4xl md:text-5xl mb-4">
@@ -82,11 +83,30 @@ export default function TurnkeyProjects() {
         </p>
       </section>
 
-      {/* 3️⃣ Visual Proof */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 md:grid-rows-3 gap-8">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-            <img key={i} src={placeholder} className="h-90 w-full object-cover hover:scale-110 transition duration-300" />
-        ))}
+      {/* 3️⃣ Projects Grid */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-gray-900">
+          Featured Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {[
+            { img: "/turnkey/turnkey1.png", title: "Supereme Infrastructure (I) PVT. LTD. Powai Hiranadani" },
+            { img: "/turnkey/turnkey2.png", title: "SBI Employees sakar swapna CHS. LTD. Andheri (East), Mumbai." },
+            { img: "/turnkey/turnkey3.png", title: "Lakozy Toyota Malad, Andheri & Vasai" },
+            { img: "/turnkey/turnkey4.png", title: "Car Mart Malad, Dadar, Grant Road & Panvel" },
+            { img: "/turnkey/turnkey5.png", title: "Tresind Dubai Restaurant Bkc" },
+            { img: "/turnkey/turnkey6.png", title: "Drifters Tap Station Bkc" },
+            { img: "/turnkey/turnkey7.png", title: "Bungalow Project, Lonavala," },
+            { img: "/turnkey/turnkey8.png", title: "Gopi Birla Memorial School, Walkeshwar" },
+            { img: "/turnkey/turnkey9.png", title: "Suvidha Developers" },
+          ].map((item, idx) => (
+            <ProjectCard 
+              key={idx} 
+              image={item.img} 
+              title={item.title} 
+            />
+          ))}
+        </div>
       </section>
 
       {/* 4️⃣ Capabilities */}
@@ -137,7 +157,7 @@ export default function TurnkeyProjects() {
       </section>
 
       {/* 6️⃣ CTA */}
-      <section className="pt-20 pb-12 px-6 text-center">
+      <section className="pt-20 pb-32 px-6 text-center">
         <h1 className="text-5xl mb-4">
           Ready to Start?
         </h1>

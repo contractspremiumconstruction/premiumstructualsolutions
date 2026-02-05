@@ -10,13 +10,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Hero() {
   const projects = [
-    { title: "Asian Paints Corp. Office, Mumbai", image: "/Asianpaints.png" },
-    { title: "Sagar Darshan Tower, Nerul", image: "/SagarDarshan.png" },
-    { title: "Surat Central Shopping Mall", image: "/CentralMall.png" },
-    { title: "G.E. Links (Goregoan), Mumbai", image: "/GELinks.png" },
-    { title: "Kalpatru Siddhanchal Phase (III), Thane", image: "/Kalpatru.png" },
-    { title: "SVK Diamonds, Surat", image: "/SVKdiamonds.png" },
-    { title: "Vishwa Lad Parishad, Mumbai", image: "/Vishwa.png" },
+    { title: "Asian Paints Corp. Office, Mumbai", image: "/prestigious/Asianpaints.png" },
+    { title: "Sagar Darshan Tower, Nerul", image: "/prestigious/SagarDarshan.png" },
+    { title: "Surat Central Shopping Mall", image: "/prestigious/CentralMall.png" },
+    { title: "G.E. Links (Goregoan), Mumbai", image: "/prestigious/GELinks.png" },
+    { title: "Kalpatru Siddhanchal Phase (III), Thane", image: "/prestigious/Kalpatru.png" },
+    { title: "SVK Diamonds, Surat", image: "/prestigious/SVKdiamonds.png" },
+    { title: "Vishwa Lad Parishad, Mumbai", image: "/prestigious/Vishwa.png" },
   ]
 
   return (

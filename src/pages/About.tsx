@@ -15,12 +15,12 @@ export default function About() {
       {/* SECTION 1: WHO WE ARE (DARK - BLUE) */}
       <section className="px-6 py-20 pb-20 bg-[var(--about-bg-dark)] text-[var(--about-text-dark)]">
         <div className="mb-16 text-center">
-          <h1 className="text-5xl font-bold text-[var(--about-accent)] mb-6">Who We Are</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Who We Are</h1>
           <div className="w-24 h-1 bg-[var(--about-accent)] mx-auto mb-10"></div>
           
           <div className="max-w-4xl mx-auto text-xl text-gray-200 leading-relaxed space-y-6 text-justify sm:text-center">
             <p>
-              It was sixty-five years ago (in 1955) that the Indian construction industry saw the entry of 
+              It was {new Date().getFullYear() - 1955} years ago (in 1955) that the Indian construction industry saw the entry of 
               <strong> Late Mr. Haji Hamid Khan Bhati</strong>, the founder-chairman of M/s H.S. Khan & Sons. 
               He created an impeccable image and reputation in the construction arena for over three decades.
             </p>

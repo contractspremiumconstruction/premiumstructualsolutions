@@ -3,27 +3,27 @@ import { useNavigate } from "react-router-dom"
 export default function HomeCategories() {
   const navigate = useNavigate()
 
-  const placeholder = "/placeholder.png";
+
 
   const categories = [
     {
         title: "RCC",
-        image: placeholder,
+        image: "/rcc/rcc1.png",
         path: "/rcc",
       },
     {
         title: "Interiors",
-        image: placeholder,
+        image: "/interior/Interior2.png",
         path: "/interiors",
     },
     {
       title: "Restoration & Waterproofing",
-      image: placeholder,
+      image: "/waterproofing/waterproofing1.png",
       path: "/restoration-waterproofing",
     },
     {
       title: "Turnkey Projects",
-      image: placeholder,
+      image: "/turnkey/turnkey1.png",
       path: "/turnkey-projects",
     },
   ]

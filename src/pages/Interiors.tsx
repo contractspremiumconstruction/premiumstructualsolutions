@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import ProjectCard from "@/components/ProjectCard"
 
 export default function Interiors() {
   const [open, setOpen] = useState(false)
@@ -55,13 +56,13 @@ export default function Interiors() {
     setOpen(false)
   }
 
-  const placeholder = "/placeholder.png";
+
 
   return (
     <main className="pt-24">
       {/* 1️⃣ Hero */}
       <section className="relative h-[70vh]">
-        <img src={placeholder} className="w-full h-full object-cover" />
+        <img src="/interior/Interior2.png" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40 flex items-center">
           <div className="max-w-7xl mx-auto px-6 text-white">
             <h1 className="text-4xl md:text-5xl mb-4">
@@ -82,11 +83,30 @@ export default function Interiors() {
         </p>
       </section>
 
-      {/* 3️⃣ Visual Proof */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 md:grid-rows-3 gap-8">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-            <img key={i} src={placeholder} className="h-90 w-full object-cover hover:scale-110 transition duration-300" />
-        ))}
+      {/* 3️⃣ Projects Grid */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-gray-900">
+          Featured Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {[
+            { img: "/interior/Interior1.png", title: "ICICI Back Office - Worli" },
+            { img: "/interior/Interior2.png", title: "ICICI Back Office - Worli" },
+            { img: "/interior/Interior3.png", title: "ICICI Back Office - Worli" },
+            { img: "/interior/Interior4.png", title: "ICICI Back Office - Worli" },
+            { img: "/interior/Interior5.png", title: "Rambhau Mhalgi Prabodhini Pt Deendayal Upadhya Museum" },
+            { img: "/interior/Interior6.png", title: "Rambhau Mhalgi Prabodhini Pt Deendayal Upadhya Museum" },
+            { img: "/interior/Interior7.png", title: "Rambhau Mhalgi Prabodhini Pt Deendayal Upadhya Museum" },
+            { img: "/interior/Interior8.png", title: "Baig House - Bandra" },
+            { img: "/interior/Interior9.png", title: "Baig House - Bandra" },
+          ].map((item, idx) => (
+            <ProjectCard 
+              key={idx} 
+              image={item.img} 
+              title={item.title} 
+            />
+          ))}
+        </div>
       </section>
 
       {/* 4️⃣ Capabilities */}
@@ -137,7 +157,7 @@ export default function Interiors() {
       </section>
 
       {/* 6️⃣ CTA */}
-      <section className="pt-20 pb-12 px-6 text-center">
+      <section className="pt-20 pb-32 px-6 text-center">
         <h1 className="text-5xl mb-4">
           Transform Your Space Today
         </h1>
