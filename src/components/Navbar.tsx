@@ -26,6 +26,7 @@ export default function Navbar() {
   const navigate = useNavigate()
 
   const [open, setOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const [formData, setFormData] = useState({
     enquiryType: "General",
@@ -70,6 +71,16 @@ export default function Navbar() {
       <button
         className={navItemClass}
         onClick={() => {
+          navigate("/")
+          onClick?.()
+        }}
+      >
+        Home
+      </button>
+
+      <button
+        className={navItemClass}
+        onClick={() => {
           navigate("/rcc")
           onClick?.()
         }}
@@ -90,6 +101,16 @@ export default function Navbar() {
       <button
         className={navItemClass}
         onClick={() => {
+          navigate("/turnkey-projects")
+          onClick?.()
+        }}
+      >
+        Turnkey Projects
+      </button>
+
+      <button
+        className={navItemClass}
+        onClick={() => {
           navigate("/restoration-waterproofing")
           onClick?.()
         }}
@@ -100,11 +121,11 @@ export default function Navbar() {
       <button
         className={navItemClass}
         onClick={() => {
-          navigate("/turnkey-projects")
+          navigate("/about")
           onClick?.()
         }}
       >
-        Turnkey Projects
+        About Us
       </button>
 
       <button
@@ -134,13 +155,12 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-6 text-2xl">
-          <Link to="/about" className="cursor-pointer transition-transform hover:scale-110">About Us</Link>
           <NavLinks />
       </div>
 
         {/* Mobile Hamburger */}
         <div className="lg:hidden">
-          <Sheet>
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button>
                 <Menu className="h-8 w-8" />
@@ -149,7 +169,7 @@ export default function Navbar() {
 
             <SheetContent side="right" className="w-72 bg-white">
               <nav className="flex flex-col gap-6 mt-12 text-xl">
-                <NavLinks />
+                <NavLinks onClick={() => setMobileOpen(false)} />
               </nav>
             </SheetContent>
           </Sheet>
