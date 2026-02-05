@@ -66,7 +66,12 @@ export default function Navbar() {
     setOpen(false)
   }
   
-  const NavLinks = ({ onClick }: { onClick?: () => void }) => (
+  /* 
+    Desktop Navigation: Groups services under a "Services" dropdown.
+    - Hover interaction for dropdown
+    - Dark background for contrast against white navbar
+  */
+  const DesktopNavLinks = ({ onClick }: { onClick?: () => void }) => (
     <>
       <button
         className={navItemClass}
@@ -78,6 +83,93 @@ export default function Navbar() {
         Home
       </button>
 
+      {/* Services Dropdown */}
+      <div className="relative group h-full flex items-center">
+        <button className={`${navItemClass} flex items-center gap-1`}>
+          Services
+        </button>
+        
+        {/* Dropdown Content */}
+        <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-[#2e2e2e] text-white shadow-xl rounded-md overflow-hidden transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto border border-gray-700">
+          <div className="py-2 flex flex-col items-start">
+            <button
+              className="w-full text-left px-6 py-3 hover:bg-[#3e3e3e] text-lg transition-colors cursor-pointer"
+              onClick={() => {
+                navigate("/rcc")
+                onClick?.()
+              }}
+            >
+              RCC
+            </button>
+            <button
+              className="w-full text-left px-6 py-3 hover:bg-[#3e3e3e] text-lg transition-colors cursor-pointer"
+              onClick={() => {
+                navigate("/interiors")
+                onClick?.()
+              }}
+            >
+              Interiors
+            </button>
+            <button
+              className="w-full text-left px-6 py-3 hover:bg-[#3e3e3e] text-lg transition-colors cursor-pointer"
+              onClick={() => {
+                navigate("/turnkey-projects")
+                onClick?.()
+              }}
+            >
+              Turnkey Projects
+            </button>
+            <button
+              className="w-full text-left px-6 py-3 hover:bg-[#3e3e3e] text-lg transition-colors cursor-pointer"
+              onClick={() => {
+                navigate("/restoration-waterproofing")
+                onClick?.()
+              }}
+            >
+              Restoration & Waterproofing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        className={navItemClass}
+        onClick={() => {
+          navigate("/about")
+          onClick?.()
+        }}
+      >
+        About Us
+      </button>
+
+      <button
+        className={navItemClass}
+        onClick={() => {
+          setOpen(true)
+          onClick?.()
+        }}
+      >
+        Contact Us
+      </button>
+    </>
+  )
+
+  /* 
+    Mobile Navigation: Keeps all links as a flat list for easy access.
+  */
+  const MobileNavLinks = ({ onClick }: { onClick?: () => void }) => (
+    <>
+      <button
+        className={navItemClass}
+        onClick={() => {
+          navigate("/")
+          onClick?.()
+        }}
+      >
+        Home
+      </button>
+      
+      {/* Flat list for mobile, no dropdowns */}
       <button
         className={navItemClass}
         onClick={() => {
@@ -155,7 +247,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-6 text-2xl">
-          <NavLinks />
+          <DesktopNavLinks />
       </div>
 
         {/* Mobile Hamburger */}
@@ -169,7 +261,7 @@ export default function Navbar() {
 
             <SheetContent side="right" className="w-72 bg-white">
               <nav className="flex flex-col gap-6 mt-12 text-xl">
-                <NavLinks onClick={() => setMobileOpen(false)} />
+                <MobileNavLinks onClick={() => setMobileOpen(false)} />
               </nav>
             </SheetContent>
           </Sheet>

@@ -7,6 +7,7 @@ import Interiors from "./pages/Interiors"
 import RestorationWaterproofing from "./pages/RestorationWaterproofing"
 import TurnkeyProjects from "./pages/TurnkeyProjects"
 import About from "./pages/About"
+import ClientsCredentials from "./pages/ClientsCredentials"
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/interiors" element={<Interiors />} />
         <Route path="/restoration-waterproofing" element={<RestorationWaterproofing />} />
         <Route path="/turnkey-projects" element={<TurnkeyProjects />} />
+        <Route path="/clients-credentials" element={<ClientsCredentials />} />
       </Routes>
       <Footer />
     </>

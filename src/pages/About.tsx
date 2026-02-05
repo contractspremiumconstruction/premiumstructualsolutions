@@ -180,6 +180,25 @@ export default function About() {
         </div>
       </section>
 
+      {/* SECTION 6: CLIENTS & CREDENTIALS GATEWAY */}
+      <section className="py-20 px-6 bg-white text-gray-900 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Professional Network</h2>
+          <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+            Over decades of excellence, we have built strong relationships with industry-leading clients, 
+            visionary architects, and expert consultants. Our portfolio stands as a testament to these 
+            collaborations and our commitment to quality.
+          </p>
+          <a 
+            href="/clients-credentials" 
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-[var(--about-bg-dark)] hover:bg-[#1a2330] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <Award className="w-5 h-5 mr-2" />
+            View Full Clients & Credentials
+          </a>
+        </div>
+      </section>
+
     </main>
   )
 }
