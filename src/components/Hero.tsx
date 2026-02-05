@@ -9,6 +9,16 @@ import Autoplay from "embla-carousel-autoplay"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function Hero() {
+  const projects = [
+    { title: "Asian Paints Corp. Office, Mumbai", image: "/Asianpaints.png" },
+    { title: "Sagar Darshan Tower, Nerul", image: "/SagarDarshan.png" },
+    { title: "Surat Central Shopping Mall", image: "/CentralMall.png" },
+    { title: "G.E. Links (Goregoan), Mumbai", image: "/GELinks.png" },
+    { title: "Kalpatru Siddhanchal Phase (III), Thane", image: "/Kalpatru.png" },
+    { title: "SVK Diamonds, Surat", image: "/SVKdiamonds.png" },
+    { title: "Vishwa Lad Parishad, Mumbai", image: "/Vishwa.png" },
+  ]
+
   return (
     <section className="relative w-full h-[60vh] md:h-[85vh] bg-black">
       <Carousel
@@ -23,15 +33,21 @@ export default function Hero() {
         className="w-full h-full"
       >
         <CarouselContent>
-          {[1, 2, 3, 4].map((_, index) => (
+          {projects.map((project, index) => (
             <CarouselItem key={index} className="h-[60vh] md:h-[85vh]">
               <div className="w-full h-full relative">
                 <img
-                  src="/placeholder.png"
-                  alt={`Project ${index + 1}`}
-                  className="w-full h-full object-cover opacity-60"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover opacity-70"
                 />
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
+                
+                <div className="absolute bottom-16 md:bottom-24 left-0 right-0 text-center z-20 px-4">
+                  <h3 className="text-white text-xl md:text-3xl font-bold tracking-wide drop-shadow-md">
+                    {project.title}
+                  </h3>
+                </div>
               </div>
             </CarouselItem>
           ))}
@@ -47,7 +63,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
         <div className="max-w-5xl px-6 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-xl font-serif">
-            Premium Structural Solutions
+            Premium Structural Solutions LLP
           </h1>
           <p className="text-xl md:text-2xl font-light tracking-wide text-gray-100 drop-shadow-md">
             RCC • Interiors • Restoration • Waterproofing • Turnkey Projects

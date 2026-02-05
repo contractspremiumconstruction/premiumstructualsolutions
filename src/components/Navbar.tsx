@@ -56,7 +56,7 @@ export default function Navbar() {
         Email: ${formData.email}`
     )
 
-    window.location.href = `mailto:designstudio2929@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:contracts.premiumconst@gmail.com?subject=${subject}&body=${body}`
     setFormData({
       enquiryType: "Bedroom",
       name: "",
