@@ -17,6 +17,8 @@ export default function Hero() {
     { title: "Kalpatru Siddhanchal Phase (III), Thane", image: "/prestigious/Kalpatru.png" },
     { title: "SVK Diamonds, Surat", image: "/prestigious/SVKdiamonds.png" },
     { title: "Vishwa Lad Parishad, Mumbai", image: "/prestigious/Vishwa.png" },
+    { title: "Aamby Valley City Twin Gate, Lonavala", image: "/prestigious/TwinGates.png" },
+    { title: "Subrato Roy Villa, Aamby Valley, Lonavla", image: "/prestigious/SubratoRoy.png" },
   ]
 
   return (
