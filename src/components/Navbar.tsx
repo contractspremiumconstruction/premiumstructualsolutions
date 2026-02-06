@@ -48,7 +48,7 @@ export default function Navbar() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent("New Bedroom Enquiry from Website")
+    const subject = encodeURIComponent("New General Enquiry from Website")
     const body = encodeURIComponent(
       `Enquiry Type: ${formData.enquiryType}
         Name: ${formData.name}
